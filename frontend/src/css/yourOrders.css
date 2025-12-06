@@ -1,0 +1,107 @@
+.orders-page {
+  width: 100%;
+  padding: 30px;
+  padding-top: 100px; /* avoid nav overlap */
+  background: #f7f7f7;
+  min-height: 80vh;
+}
+
+.orders-page h2 {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #222;
+  font-weight: 600;
+}
+
+/* ✅ Empty text */
+.empty-text {
+  text-align: center;
+  font-size: 18px;
+  color: #777;
+  margin-top: 50px;
+}
+
+/* ✅ Orders grid */
+.orders-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+  padding: 10px;
+}
+
+/* ✅ Order card */
+.order-card {
+  background: #fff;
+  padding: 18px;
+  border-radius: 14px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  transition: 0.25s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 5px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* ✅ Product image */
+.order-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* ✅ Product name */
+.order-card h3 {
+  font-size: 19px;
+  margin-top: 12px;
+  margin-bottom: 5px;
+  color: #222;
+  font-weight: 600;
+}
+
+/* ✅ Price & order text */
+.order-card p {
+  font-size: 15px;
+  margin: 4px 0;
+  color: #555;
+}
+
+/* ✅ Status badge */
+.status {
+  display: inline-block;
+  padding: 6px 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+/* ✅ Delivered = Green badge */
+.status.delivered {
+  background: #16a34a;
+  color: white;
+}
+
+/* ✅ Undelivered = Red badge */
+.status.undelivered {
+  background: #dc2626;
+  color: white;
+}
+
+
+/* ✅ Mobile optimization */
+@media (max-width: 480px) {
+  .order-card img {
+    height: 150px;
+  }
+
+  .order-card h3 {
+    font-size: 18px;
+  }
+
+  .order-card p {
+    font-size: 14px;
+  }
+}
