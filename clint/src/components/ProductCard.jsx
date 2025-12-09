@@ -1,25 +1,51 @@
 import React from "react";
-import "../css/product.css";
-
+import "../css/productCard.css";
 
 const ProductCard = ({ product, onClick }) => {
-  return (
-    <div className="techbazzar-card" onClick={() => onClick(product.id)}>
-      <div className="price-tag">{product.price}</div>
+  const handleClick = () => {
+    if (onClick) onClick(product?.id);
+  };
 
-      <div className="product-image-wrap">
-        <img src={product.image} alt={product.name} className="product-image" />
+  return (
+    <div className="techbazzar-card" onClick={handleClick} role="button">
+      
+      {/* Price Tag */}
+      <div className="price-tag">
+        {product?.price ? `₹${product.price}` : "₹0"}
       </div>
 
+      {/* Image */}
+      <div className="product-image-wrap">
+        <img
+          src={product?.image || "/placeholder.png"}
+          alt={product?.name || "Product Image"}
+          className="product-image"
+          loading="lazy"
+        />
+      </div>
+
+      {/* Content */}
       <div className="product-content">
-        <h3 className="product-title">{product.name}</h3>
+        <h3 className="product-title">{product?.name || "Unnamed Product"}</h3>
+
         <p className="product-desc">
-          {product.desc || "Lorem ipsum dolor sit amet, consectetur adipiscing elit."}
+          {product?.desc ||
+            "This is a premium quality product available at TechBazzar."}
         </p>
+
         <div className="rating">★★★★☆</div>
       </div>
 
-      <button className="add-btn">ADD TO CART</button>
+      {/* CTA Button */}
+      <button
+        className="add-btn"
+        onClick={(e) => {
+          e.stopPropagation(); // Prevent card click
+          console.log("Added to Cart:", product?.name);
+        }}
+      >
+        ADD TO CART
+      </button>
     </div>
   );
 };

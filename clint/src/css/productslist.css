@@ -1,0 +1,157 @@
+/* ================================
+   PRODUCT GRID
+================================== */
+.product-container {
+  width: 100%;
+  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  justify-content: center;
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+.no-products {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 600;
+  padding: 20px;
+}
+
+
+/* ================================
+   PRODUCT CARD
+================================== */
+.techbazzar-card {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  position: relative;
+  transition: all 0.25s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.techbazzar-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+
+/* PRICE TAG */
+.price-tag {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #111;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  z-index: 5;
+}
+
+
+/* PRODUCT IMAGE */
+.product-image-wrap {
+  width: 100%;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 14px;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.3s;
+}
+
+.techbazzar-card:hover .product-image {
+  transform: scale(1.05);
+}
+
+
+/* CONTENT */
+.product-content {
+  padding: 12px 2px;
+}
+
+.product-title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #222;
+}
+
+.product-desc {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+  line-height: 1.4;
+}
+
+.rating {
+  font-size: 16px;
+  color: #ffb400;
+  margin-bottom: 12px;
+}
+
+
+/* ADD TO CART BUTTON */
+.add-btn {
+  width: 100%;
+  padding: 10px 0;
+  background: #111;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.add-btn:hover {
+  background: #333;
+}
+
+
+/* ================================
+   ANIMATIONS
+================================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ================================
+   RESPONSIVE
+================================== */
+@media (max-width: 480px) {
+  .product-image-wrap {
+    height: 180px;
+  }
+
+  .product-title {
+    font-size: 18px;
+  }
+
+  .product-container {
+    padding: 20px 10px;
+  }
+}

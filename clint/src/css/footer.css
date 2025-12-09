@@ -1,0 +1,117 @@
+/* ===============================
+   FOOTER — TECHBAZZAR
+   Clean, Modern, Responsive
+=============================== */
+
+.footer {
+  background: #0b0c0d;
+  color: #ffffff;
+  padding: 50px 20px 25px;
+  margin-top: 40px;
+  border-top: 2px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ===============================
+   Section Base
+=============================== */
+.footer-section {
+  flex: 1;
+  min-width: 230px;
+}
+
+.footer-section h3 {
+  margin-bottom: 12px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.footer-section p {
+  color: #cfcfcf;
+  line-height: 1.6;
+}
+
+/* ===============================
+   Brand Section
+=============================== */
+.footer-logo {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: #12e18c;
+  letter-spacing: 1px;
+}
+
+/* ===============================
+   Links Styling
+=============================== */
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin: 6px 0;
+}
+
+.footer-section ul li a {
+  color: #cfcfcf;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #12e18c;
+  padding-left: 4px;
+}
+
+/* ===============================
+   Bottom Strip
+=============================== */
+.footer-bottom {
+  text-align: center;
+  margin-top: 35px;
+  padding-top: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  font-size: 14px;
+  color: #d6d6d6;
+}
+
+.footer-bottom span {
+  color: #12e18c;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* Hover effect on "Sunil Dharajiya" */
+.footer-bottom span:hover {
+  text-decoration: underline;
+}
+
+/* ===============================
+   Responsive Design
+=============================== */
+
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-section {
+    text-align: center;
+  }
+}

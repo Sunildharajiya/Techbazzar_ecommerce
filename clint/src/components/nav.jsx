@@ -54,7 +54,7 @@ const Nav = ({ onSearch }) => {
         </button>
       </nav>
 
-      {/* ✅ Show banner only if bannerOn is true */}
+      {/* how banner only if bannerOn is true */}
       {bannerOn && <Banner />}
 
       {/* Slide Menu */}
