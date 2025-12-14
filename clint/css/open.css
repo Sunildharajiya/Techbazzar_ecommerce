@@ -46,16 +46,16 @@ nav {
 .nav-box {
   display: flex;
   align-items: center;
-  gap: 6px;                   /* reduced gap */
+  gap: 4px;                   
 }
 
 /* Left side */
 #nav-logo {
-  width: 34px;                /* smaller logo */
+  width: 29px;
 }
 
 #nav-watermark {
-  font-size: 14px;            /* readable on small screens */
+  font-size: 11px;      
   white-space: nowrap;
 }
 
@@ -75,7 +75,7 @@ nav {
   }
 
   #nav-logo {
-    width: 38px;
+    width: 28px;
   }
 
   #nav-watermark {
@@ -99,11 +99,11 @@ nav {
   }
 
   #nav-logo {
-    width: 42px;
+    width: 35px;
   }
 
   #nav-watermark {
-    font-size: 17px;
+    font-size: 12px;
   }
 
 }

@@ -2,3 +2,39 @@
 /*      CSS FOR INDEX.HTML              */
 /* -------------------------------------*/
 
+/* -------- design banners -------------*/
+/* Banner Container */
+#banner-div {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Banner Image */
+#banner-img {
+  width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+  #banner-div {
+    height: 320px;
+  }
+}
+
+/*  Laptops */
+@media (min-width: 1024px) {
+  #banner-div {
+    height: 420px;
+  }
+}
+
+/*  Large Screens */
+@media (min-width: 1440px) {
+  #banner-div {
+    height: 520px;
+  }
+}
