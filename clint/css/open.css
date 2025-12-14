@@ -1,25 +1,158 @@
-/* -------------------------------------*/
-/*      CSS FOR ALL HTML FILES         */
-/* -------------------------------------*/
+/* =====================================
+   RESET
+===================================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  font-family: Arial, sans-serif;
+}
 
-/* variables of classNames*/
+/* =====================================
+   FONT
+===================================== */
 .bbh-bartle-regular {
   font-family: "BBH Bartle", sans-serif;
   font-weight: 200;
-  font-style: normal;
 }
 
-.circle{
+/* =====================================
+   COMMON
+===================================== */
+.circle {
   border-radius: 50%;
 }
 
-/* nav styele */
-
-#nav-logo{
-  width: 5vw;
+/* Icons tuned for small phones */
+.icon {
+  width: 22px;
+  height: auto;
 }
 
-#nav-watermark{
-  font-size:1vw;
+/* =====================================
+   NAVBAR — MOBILE FIRST (≤ 430px)
+===================================== */
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 6px 8px;           /* tighter padding */
+}
+
+.nav-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;                   /* reduced gap */
+}
+
+/* Left side */
+#nav-logo {
+  width: 34px;                /* smaller logo */
+}
+
+#nav-watermark {
+  font-size: 14px;            /* readable on small screens */
+  white-space: nowrap;
+}
+
+/* Right side */
+#nav-menu-icon {
+  width: 20px;
+}
+
+/* =====================================
+   NORMAL MOBILES (≥ 375px)
+===================================== */
+
+@media (min-width: 375px) {
+
+  .icon {
+    width: 24px;
+  }
+
+  #nav-logo {
+    width: 38px;
+  }
+
+  #nav-watermark {
+    font-size: 15px;
+  }
+
+}
+
+/* =====================================
+   LARGE MOBILES / SMALL TABLETS (≥ 480px)
+===================================== */
+
+@media (min-width: 480px) {
+
+  nav {
+    padding: 8px 12px;
+  }
+
+  .icon {
+    width: 26px;
+  }
+
+  #nav-logo {
+    width: 42px;
+  }
+
+  #nav-watermark {
+    font-size: 17px;
+  }
+
+}
+
+/* =====================================
+   TABLETS (≥ 768px)
+===================================== */
+
+@media (min-width: 768px) {
+
+  nav {
+    padding: 12px 24px;
+  }
+
+  .nav-box {
+    gap: 12px;
+  }
+
+  .icon {
+    width: 30px;
+  }
+
+  #nav-watermark {
+    font-size: 22px;
+  }
+
+}
+
+/* =====================================
+   DESKTOP (≥ 1024px)
+===================================== */
+
+@media (min-width: 1024px) {
+
+  nav {
+    padding: 14px 40px;
+  }
+
+  .icon {
+    width: 34px;
+    cursor: pointer;
+  }
+
+  #nav-logo {
+    width: 58px;
+  }
+
+  #nav-watermark {
+    font-size: 26px;
+  }
+
 }
