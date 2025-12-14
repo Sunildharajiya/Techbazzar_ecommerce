@@ -39,6 +39,6 @@ async function deleteUser(id) {
 
 
 // --- DEMO ---
-await deleteUser(1765560088695);
+await deleteUser();
 await getUsers();
 

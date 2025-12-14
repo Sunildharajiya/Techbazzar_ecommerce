@@ -1,22 +1,29 @@
-// declaring img tag of html for banner slider
+// =====================================
+//  BANNER SLIDER LOGIC
+// =====================================
 
-const imgTag = document.querySelector('#banner-img');
+// bannerSlider is already initialized
+// in searchbar-visiblity.js
 
-//'i' is a variable of logic which helps to change slides img
+/* const bannerSlider = document.querySelector('#banner-img');*/
+
+// 'i' controls which banner image is shown
 let i = 1;
 
-const changeImg = () =>{
- //incrising value of i , but defualt value is 1 
-  i++;     
-  
-//when i becames > 3 it automatically will 1
-  if(i > 3){
-    i = 1; 
-  }
-  
-  //giving value of i in the src of slider img tag
-  imgTag.src = `./assets/banners/banner${i}.jpg`
-}
+// Function to change banner image
+const changeImg = () => {
 
+  // Increase image index
+  i++;
+
+  // Reset index when it exceeds total images
+  if (i > 3) {
+    i = 1;
+  }
+
+  // Update banner image source
+  bannerSlider.src = `./assets/banners/banner${i}.jpg`;
+};
+
+// Change image every 3 seconds
 setInterval(changeImg, 3000);
-//setInterval is a function that runs again and again after fixed amount of time

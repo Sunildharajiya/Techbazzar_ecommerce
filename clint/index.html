@@ -9,65 +9,78 @@
   <title>TECHBAZZAR</title>
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="/logo.png">
+  <link rel="icon" type="image/png" href="./assets/logo.png">
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=BBH+Bartle&display=swap" rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="./css/open.css">
   <link rel="stylesheet" href="./css/index.css">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=BBH+Bartle&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-  <!-- ================= Navbar ================= -->
-  <nav>
-    <!-- Left Section -->
-    <div id="div-nav-left" class="nav-box">
-      <a href="index.html">
-        <img src="./assets/logo.png" id="nav-logo" alt="TechBazzar Logo">
-      </a>
+<!-- ================= NAVBAR ================= -->
+<nav>
+  <!-- Left -->
+  <div id="div-nav-left" class="nav-box">
+    <a href="index.html">
+      <img src="./assets/logo.png" id="nav-logo" alt="TechBazzar Logo">
+    </a>
+    <h1 id="nav-watermark" class="bbh-bartle-regular">TECHBAZZAR</h1>
+  </div>
 
-      <h1 id="nav-watermark" class="bbh-bartle-regular">
-        TECHBAZZAR
-      </h1>
-    </div>
+  <!-- Right -->
+  <div id="div-nav-right" class="nav-box">
+    <img src="./assets/search.png" class="icon" id="nav-search-icon" alt="Search">
+    <img src="./assets/cart.png" class="icon" id="nav-cart-icon" alt="Cart">
+    <img src="./assets/user-icon.png" class="icon" id="nav-user-icon" alt="User">
+    <img src="./assets/menu.png" class="icon" id="nav-menu-icon" alt="Menu">
+  </div>
+</nav>
 
-    <!-- Right Section -->
-    <div id="div-nav-right" class="nav-box">
-      <img src="./assets/search.png" class="icon" id="nav-search-icon" alt="Search">
-      <img src="./assets/cart.png" class="icon" id="nav-cart-icon" alt="Cart">
-      <img src="./assets/user-icon.png" class="icon" id="nav-user-icon" alt="User">
-      <img src="./assets/menu.png" class="icon" id="nav-menu-icon" alt="Menu">
-    </div>
-  </nav>
-  <hr>
-  
-<!---------------------------->
-<!-----     BANNER      ------>
-<!---------------------------->
-<div id = "banner-div">
-    <img src='./assets/banners/banner1.jpg' id="banner-img" alt='loding..'>
-    <script src='js/componnentFunctions/index/banner.js'></script>
+<!-- ================= SEARCH ================= -->
+<div id="search-div">
+  <input type="search" id="searchbox" placeholder="Search products...">
 </div>
 
-<!---------------------------->
-<!----   HERO SECTION    ----->
-<!---------------------------->
+<!-- ================= MENU ================= -->
+<div id="menu">
+  <ul>
+    <li><a href="#">👤 My Account</a></li>
+    <li><a href="#">🛒 My Cart</a></li>
+    <li><a href="#">📦 Complete Orders</a></li>
+    <li><a href="#">❤️ Favourite</a></li>
+    <li><a href="#">ℹ️ About Us</a></li>
+  </ul>
+</div>
+
+<hr>
+
+<!-- ================= BANNER ================= -->
+<div id="banner-div">
+  <img src="./assets/banners/banner1.jpg" id="banner-img" alt="Banner">
+</div>
+
+<!-- ================= MAIN ================= -->
 <main>
-  
+  <!-- products / content here -->
 </main>
 
-<!---------------------------->
-<!---- FOOTER SECTION    ----->
-<!---------------------------->
-
+<!-- ================= FOOTER ================= -->
 <footer>
-  
+  <h1 class="bbh-bartle-regular">TECHBAZZAR</h1>
+  <p>This is an awesome ecommerce store example.</p>
+  <p>Disclaimer: Built for learning purposes only.</p>
 </footer>
+
+<!-- ================= SCRIPTS ================= -->
+<script src="js/componnentFunctions/open/searchbar-visiblity.js"></script>
+<script src="js/componnentFunctions/open/menu-visiblity.js"></script>
+<script src="js/componnentFunctions/index/banner.js"></script>
 
 </body>
 </html>
